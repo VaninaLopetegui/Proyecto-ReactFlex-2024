@@ -7,6 +7,7 @@ export const ItemList = ({products}) => {
             products.map((product) =>{
             return (
             <ItemCard key={product.id} 
+                    id={product.id}
                     nombre={product.nombre} 
                     precio={product.precio} 
                     categoria={product.categoria} 
@@ -17,3 +18,4 @@ export const ItemList = ({products}) => {
         </div>
     )
 }
+

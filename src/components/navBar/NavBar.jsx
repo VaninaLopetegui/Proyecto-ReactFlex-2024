@@ -6,13 +6,15 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 import "./navBar.css"
 import { CartWidget } from '../cartWidget/CartWidget';
 
-export const NavBar = ({cartWidget}) =>{
+export const NavBar = () =>{
     return (
     <>
         <Navbar bg="light">
             <Container>
-                <Navbar.Brand href="#">
-                    <img className="iconNav" src="../.././public/icon.png"></img>
+                <Navbar.Brand>
+                    <Link to={"inicio"}>
+                        <img className="iconNav" src="../.././public/icon.png"></img>
+                    </Link>
                 </Navbar.Brand>
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="me-auto">
@@ -26,9 +28,15 @@ export const NavBar = ({cartWidget}) =>{
                             <Link to={"contacto"}>Contacto</Link>
                         </Nav.Link>
                         <NavDropdown title="Categorias" id="basic-nav-dropdown">
-                            <NavDropdown.Item href="#action/3.1">Anime</NavDropdown.Item>
-                            <NavDropdown.Item href="#action/3.2">Juegos</NavDropdown.Item>
-                            <NavDropdown.Item href="#action/3.3">Series</NavDropdown.Item>
+                            <Link to={"anime"}>
+                                <NavDropdown.Item >Anime</NavDropdown.Item>
+                            </Link>
+                            <Link to={"juegos"}>
+                                <NavDropdown.Item >Juegos</NavDropdown.Item>
+                            </Link>
+                            <Link to={"series"}>
+                                <NavDropdown.Item >Series</NavDropdown.Item>
+                            </Link>
                             <NavDropdown.Divider />
                         </NavDropdown>
                     </Nav>

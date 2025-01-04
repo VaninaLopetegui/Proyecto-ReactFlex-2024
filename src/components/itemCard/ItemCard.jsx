@@ -1,9 +1,10 @@
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
+import { Link } from 'react-router-dom';
 
-export const ItemCard = ({nombre, precio, categoria, img}) => {
+export const ItemCard = ({id, nombre, precio, categoria, img}) => {
     return (
-        <div className="align-items-center justify-content-center text-center">
+        <Link to={`/productos/${id}`} className="align-items-center justify-content-center text-center">
             <Card style={{ width: '18rem' }}>
                 <Card.Img variant="top" src={img} />
                 <Card.Body>
@@ -13,6 +14,6 @@ export const ItemCard = ({nombre, precio, categoria, img}) => {
                     <Button variant="primary">Ver producto</Button>
                 </Card.Body>
             </Card>
-        </div>
+        </Link>
     )
 }
