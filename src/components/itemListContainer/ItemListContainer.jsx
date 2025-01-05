@@ -12,13 +12,17 @@ export function ItemListContainer() {
         const getProducts = new Promise ((resolve) => {
             setTimeout(() => {
                 resolve(productos)
-            }, 2000)
+            }, 500)
         })
 
         getProducts.then((data) => {
             if (id){
-                const filteredProducts = data.filter(product => product.categoria.toLowerCase() === id.toLowerCase());
-                setProducts(filteredProducts);
+                if (id==="all"){
+                    setProducts(data);
+                } else {
+                    const filteredProducts = data.filter(product => product.categoria.toLowerCase() === id.toLowerCase());
+                    setProducts(filteredProducts);
+                }
             } else {
                 setProducts(data);
             }
