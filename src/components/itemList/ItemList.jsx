@@ -11,6 +11,7 @@ export const ItemList = ({products}) => {
                     nombre={product.nombre} 
                     precio={product.precio} 
                     categoria={product.categoria} 
+                    descripcion={product.descripcion} 
                     img={product.img}
             />)
         })
