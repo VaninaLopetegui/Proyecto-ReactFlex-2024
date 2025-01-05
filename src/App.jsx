@@ -18,6 +18,7 @@ function App() {
             <Route path='inicio' element={<Home />}/>
             <Route path='productos' element={<ItemListContainer />}/>
             <Route path='productos/:id' element={<DetailItem/>}/>
+            <Route path='category/:id' element={<ItemListContainer/>}/>
             <Route path='contacto' element={<Contact />}/>
             <Route path='*' element={<Error />}/>
           </Route>
