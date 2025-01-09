@@ -1,9 +1,13 @@
+import "./home.css"
+import { Button } from "../button/Button"
+
 export const Home = () => {
   return (
-    <div>
+    <div className="contenedorHome">
         <h1>
-            Bienvenido a mi tienda online de alfombra✊💫
+            Encuentra tu alfombra soñada aquí
         </h1>
+        <Button direccionUrl="/productos" texto="Ver productos"/>
     </div>
   )
 }

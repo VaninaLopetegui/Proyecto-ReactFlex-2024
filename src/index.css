@@ -1,0 +1,12 @@
+/* fuente de letra */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+
+/* General */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Bebas Neue", serif;
+    color: #2c2c2c;
+}

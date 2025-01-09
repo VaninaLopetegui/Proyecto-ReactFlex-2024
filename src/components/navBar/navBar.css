@@ -1,3 +1,29 @@
-.iconNav {
-    width: 70px;
+@media screen and (min-width:360px) {
+    .iconNav {
+        width: 16vw;
+    }
+    #basic-navbar-nav {
+        font-size: 0.8rem;
+    }
+}
+
+@media screen and (min-width:480px) {
+    #basic-navbar-nav {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (min-width:600px) {
+    .iconNav {
+        width: 10vw;
+    }
+    #basic-navbar-nav {
+        font-size: 1.3rem;
+    }
+}
+
+@media screen and (min-width:1150px) {
+    .iconNav {
+        width: 7.5vw;
+    }
 }

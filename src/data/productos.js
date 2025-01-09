@@ -1,5 +1,5 @@
 export const productos = [
-    {id:1, nombre:"ITACHI", precio:35, categoria:"ANIME", descripcion: "Alfombra de Itachi, personaje de Naruto", img:"https://i.pinimg.com/564x/77/7b/ce/777bce7e4073ffa9dacc8b88a5ccafc8.jpg"},
+    {id:1, nombre:"APPA", precio:69, categoria:"SERIES", descripcion: "Alfombra de Appa, personaje de Avatar", img:"https://i.pinimg.com/736x/ce/13/35/ce1335fb144afcfe16ef153396805678.jpg"},
     {id:2, nombre:"KAKASHI", precio:45, categoria:"ANIME", descripcion: "Alfombra de Kakashi, personaje de Naruto", img:"https://i.pinimg.com/564x/e6/2b/88/e62b88ac82b54f50d9faa1122e8a897d.jpg"},
     {id:3, nombre:"GARA", precio:50, categoria:"ANIME", descripcion: "Alfombra de Gara, personaje de Naruto", img:"https://i.pinimg.com/564x/5d/09/41/5d094176ab1e264f4548ab79ea531f23.jpg"},
     {id:4, nombre:"GOKU", precio:45, categoria:"ANIME", descripcion: "Alfombra de Goku, personaje de Dragon Ball z", img:"https://i.pinimg.com/564x/cf/5a/44/cf5a44db65740153e5e84428a86f90d4.jpg"},
