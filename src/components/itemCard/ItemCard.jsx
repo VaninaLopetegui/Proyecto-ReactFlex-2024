@@ -1,18 +1,19 @@
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 import { Link } from 'react-router-dom';
+import "./itemCard.css"
 
 export const ItemCard = ({id, nombre, precio, categoria, descripcion, img}) => {
     return (
-        <Link to={`/productos/${id}`} className="align-items-center justify-content-center text-center">
-            <Card style={{ width: '18rem' }}>
+        <Link to={`/productos/${id}`} style={{ textDecoration: 'none' }}>
+            <Card className="cardProduct">
                 <Card.Img variant="top" src={img} />
                 <Card.Body>
-                    <Card.Title>{nombre}</Card.Title>
+                    <Card.Title className="tituloCardProducto">{nombre}</Card.Title>
                     <Card.Text>{categoria}</Card.Text>
                     <Card.Text>{descripcion}</Card.Text>
-                    <Card.Text>{precio} USD</Card.Text>
-                    <Button variant="primary">Ver producto</Button>
+                    <Card.Text className="precioCardProducto">US$ {precio}</Card.Text>
+                    <Button>Ver producto</Button>
                 </Card.Body>
             </Card>
         </Link>

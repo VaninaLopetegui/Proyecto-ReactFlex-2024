@@ -1,5 +1,7 @@
 import { productos } from "../../data/productos";
 import { useParams } from "react-router-dom";
+import Image from 'react-bootstrap/Image';
+import "./detailItem.css"
 
 export const DetailItem = () => {
     const {id} = useParams();
@@ -8,11 +10,15 @@ export const DetailItem = () => {
         return <h2>Este producto no existe</h2>
     }
     return (
-        <div>
-            <h2>Producto:</h2>
-            <h3>{productSelect.nombre}</h3>
-            <p>{productSelect.categoria}</p>
-            <h4>{productSelect.precio}</h4>
+        <div className="productDetail container">
+            <div>
+                <Image src={productSelect.img} fluid/>
+            </div>
+            <div className="productDetailInfo d-flex justify-content-start flex-column">
+                <h5>Nombre de producto: <span>{productSelect.nombre}</span></h5>
+                <h5>Precio por unidad: <span>US$ {productSelect.precio}</span></h5>
+                <h5>Descripcion de producto: <span>{productSelect.descripcion}</span></h5>
+            </div>
         </div>
     )
 }

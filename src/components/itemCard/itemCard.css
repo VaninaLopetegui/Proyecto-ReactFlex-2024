@@ -1,0 +1,26 @@
+.cardProduct {
+    background-color: #f7f7f7;
+    width: 18rem; 
+    height: 39rem;  
+    text-align: center; 
+}
+
+.cardProduct .tituloCardProducto{
+    font-size: 1.6rem;
+    color: #752CEC;
+}
+
+.cardProduct .precioCardProducto{
+    font-size: 1.3rem;
+    color: #752CEC;
+}
+
+.cardProduct button{
+    background-color: #752CEC;
+    border-color: #752CEC;
+}
+
+.cardProduct button:hover{
+    background-color: #6714ec;
+    border-color: #6714ec;
+}

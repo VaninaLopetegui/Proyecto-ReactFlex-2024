@@ -1,0 +1,9 @@
+.productDetail {
+    display: flex;
+    flex-direction: row;
+}
+
+.productDetailInfo span{
+    font-size: 2.5rem;
+    display: block;
+}

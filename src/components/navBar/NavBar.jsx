@@ -9,7 +9,7 @@ import { CartWidget } from "../cartWidget/CartWidget";
 export const NavBar = () => {
     return (
         <>
-            <Navbar bg="light">
+            <Navbar className="navBar">
                 <Container>
                     <Navbar.Brand>
                         <Link to="/inicio">
@@ -27,17 +27,17 @@ export const NavBar = () => {
                             <Nav.Link as={Link} to="/contacto">
                                 Contacto
                             </Nav.Link>
-                            <NavDropdown title="Categorías" id="basic-nav-dropdown">
-                                <Nav.Link as={Link} to="/category/all">
+                            <NavDropdown title="Categorías" id="basic-nav-dropdown" className="dropDownNav">
+                                <Nav.Link as={Link} to="/category/all" className="dropDownItem">
                                     Todos
                                 </Nav.Link>
-                                <Nav.Link as={Link} to="/category/anime">
+                                <Nav.Link as={Link} to="/category/anime" className="dropDownItem">
                                     Anime
                                 </Nav.Link>
-                                <Nav.Link as={Link} to="/category/games">
+                                <Nav.Link as={Link} to="/category/games" className="dropDownItem">
                                     Juegos
                                 </Nav.Link>
-                                <Nav.Link as={Link} to="/category/series">
+                                <Nav.Link as={Link} to="/category/series" className="dropDownItem">
                                     Series
                                 </Nav.Link>
                             </NavDropdown>

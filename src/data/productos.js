@@ -9,7 +9,7 @@ export const productos = [
     {id:8, nombre:"GOJO", precio:45, categoria:"ANIME", descripcion: "Alfombra de Gojo, personaje de Jujutsu Kaisen", img:"https://i.pinimg.com/564x/40/48/88/404888b99ff095bbf29b6ca94f3573bb.jpg"},
     {id:9, nombre:"TOTORO", precio:51, categoria:"ANIME", descripcion: "Alfombra de Totoro, personaje de Mi vecino Totoro", img:"https://i.pinimg.com/564x/3e/f8/e9/3ef8e937f93d509da676f63e81ddd49f.jpg"},
     {id:10, nombre:"INOSUKE", precio:64, categoria:"ANIME", descripcion: "Alfombra de Inosuke, personaje de Demon Slayer", img:"https://i.pinimg.com/564x/6a/f9/94/6af9941df7aba4443b04251051621817.jpg"},
-    {id:11, nombre:"BOWSER", precio:78, categoria:"GAMES", descripcion: "Alfombra de Bowser, personaje de Mario", img:"https://i.pinimg.com/564x/ee/b3/d8/eeb3d85b1e3d7e274df7011687835599.jpg"},
+    {id:11, nombre:"PANTERA ROSA", precio:70, categoria:"SERIES", descripcion: "Alfombra de la pantera rosa", img:"https://i.pinimg.com/736x/e7/94/49/e794491d9230be5bfa8623cf28a7467f.jpg"},
     {id:12, nombre:"KIRBY", precio:66, categoria:"GAMES", descripcion: "Alfombra de Kirby, personaje de Mario", img:"https://i.pinimg.com/564x/67/0e/42/670e4272ffe051b5983639acf5f03e7c.jpg"},
     {id:13, nombre:"CHARMANDER", precio:70, categoria:"GAMES", descripcion: "Alfombra de Charmander, personaje de Pokemón", img:"https://i.pinimg.com/564x/72/01/ab/7201abc14c9be992f539acb2e3ef7a20.jpg"},
     {id:14, nombre:"SONIC", precio:32, categoria:"GAMES", descripcion: "Alfombra de Sonic", img:"https://i.pinimg.com/564x/96/61/fc/9661fcdec1cff79a393f8ffb8ec4830f.jpg"},
@@ -18,5 +18,5 @@ export const productos = [
     {id:17, nombre:"PICKLE RICK", precio:25, categoria:"SERIES", descripcion: "Alfombra de Pickle Rich, personaje de Rick y Morty", img:"https://i.pinimg.com/564x/fa/60/34/fa6034ddaaa5c52542df29c36129ea94.jpg"},
     {id:18, nombre:"GARY", precio:15, categoria:"SERIES", descripcion: "Alfombra de Gary, personaje de Bob Esponja", img:"https://i.pinimg.com/564x/52/c9/45/52c945da412e583ec0aca110279de5ca.jpg"},
     {id:19, nombre:"CUDDLES", precio:65, categoria:"SERIES", descripcion: "Alfombra de Cuddles, personaje de Happy Tree Friends", img:"https://i.pinimg.com/750x/ba/c8/20/bac82049456a590362d31ad02190f618.jpg"},
-    {id:20, nombre:"RICK Y MORTY", precio:29, categoria:"SERIES", descripcion: "Alfombra de Rick y Morty", img:"https://i.pinimg.com/564x/12/97/5b/12975b641035f21541adbb843de773f8.jpg"}
+    {id:20, nombre:"STITCH", precio:29, categoria:"SERIES", descripcion: "Alfombra de Stitch, personaje de Lilo y Stitch", img:"https://i.pinimg.com/736x/07/a0/69/07a0695ac486e2555ec51246aa45a146.jpg"}
 ]

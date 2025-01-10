@@ -1,3 +1,12 @@
+.cartWidget {
+    transition: all 0.4s;
+}
+
+.cartWidget:hover {
+    transform: scale(1.05);
+    filter: drop-shadow(0px 10px 25px#a0a0a0);
+}
+
 @media screen and (max-width:470px) {
     .cartWidget {
         width: 1.5rem;
