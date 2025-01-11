@@ -1,9 +1,39 @@
-.productDetail {
+.contenedorProductDetail {
+    width: 100%;
+    height: 80vh;
+}
+
+.productDetail {    
     display: flex;
     flex-direction: row;
+}
+
+.productDetail h6{
+    font-size: 0.8rem;
+    color: rgba(0, 0, 0, 0.473);
+}
+
+.productDetail button {
+    background-color: #752CEC;
+    border-color: #752CEC;
+    width: 9rem;
+}
+
+.productDetail button:hover{
+    background-color: #6714ec;
+    border-color: #6714ec;
+}
+
+.productDetailImg img{
+    width: 35rem;   
 }
 
 .productDetailInfo span{
     font-size: 2.5rem;
     display: block;
+}
+
+#dropdown-basic:hover {
+    background-color: #6714ec;
+    border-color: #6714ec;
 }
