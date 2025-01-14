@@ -1,5 +1,6 @@
 import { productos } from "../../data/productos";
 import { useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 import Image from 'react-bootstrap/Image';
 import Button from 'react-bootstrap/Button';
 import Dropdown from 'react-bootstrap/Dropdown';
@@ -13,6 +14,7 @@ export const DetailItem = () => {
     }
     return (
         <div className="contenedorProductDetail d-flex justify-content-center align-items-center">
+        <Button as={Link} id="returnButton" to="/productos">Volver</Button>
             <div className="productDetail w-75 justify-content-center align-items-center flex-row">
                 <div className="productDetailImg">
                     <Image src={productSelect.img} fluid/>

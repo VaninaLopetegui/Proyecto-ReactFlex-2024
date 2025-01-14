@@ -37,3 +37,14 @@
     background-color: #6714ec;
     border-color: #6714ec;
 }
+
+#returnButton {
+    background-color: #752CEC;
+    border-color: #752CEC;
+    width: 9rem;
+}
+
+#returnButton:hover{
+    background-color: #6714ec;
+    border-color: #6714ec;
+}

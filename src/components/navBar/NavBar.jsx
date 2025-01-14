@@ -40,6 +40,9 @@ export const NavBar = () => {
                                 <Nav.Link as={Link} to="/category/series" className="dropDownItem">
                                     Series
                                 </Nav.Link>
+                                <Nav.Link as={Link} to="/category/general" className="dropDownItem">
+                                    Generales
+                                </Nav.Link>
                             </NavDropdown>
                         </Nav>
                     </Navbar.Collapse>
