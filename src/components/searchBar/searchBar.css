@@ -1,0 +1,14 @@
+form {
+    margin-bottom: 1rem;
+}
+
+.btn-primary{
+    background-color: #752CEC!important;
+    border-color: #752CEC !important;
+    width: 9rem;
+}
+
+.btn-primary:hover{
+    background-color: #6714ec !important;
+    border-color: #6714ec !important;
+}

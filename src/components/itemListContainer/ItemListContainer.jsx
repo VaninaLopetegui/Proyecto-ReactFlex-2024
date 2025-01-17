@@ -3,9 +3,11 @@ import './itemListContainer.css';
 import { ItemList } from '../itemList/ItemList';
 import { productos } from "../../data/productos";
 import { useParams } from "react-router-dom";
+import { SearchBar } from "../searchBar/SearchBar";
 
 export function ItemListContainer() {
     const [products, setProducts] = useState([]);
+    const [filteredProducts, setFilteredProducts] = useState([]);
     const {id} = useParams();
 
     useEffect (() => {
@@ -29,9 +31,15 @@ export function ItemListContainer() {
         })
 
     }, [id]);
+
+    useEffect(() => {
+        setFilteredProducts(products);
+    }, [products]);
+
     return (
-        <div className="container w-100">
-            <ItemList products={products} />
+        <div className="container w-100 containerList d-flex flex-column align-items-center">
+            <SearchBar products={products} onFilter={setFilteredProducts}/>
+            <ItemList products={filteredProducts}/>
         </div>
     );
 }
