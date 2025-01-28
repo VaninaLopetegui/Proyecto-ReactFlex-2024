@@ -1,5 +1,7 @@
-import { productos } from "../../data/productos";
 import { useParams } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { collection, getDocs } from "firebase/firestore";
+import { db } from "../../firebase/config";
 import { Link } from "react-router-dom";
 import Image from 'react-bootstrap/Image';
 import Button from 'react-bootstrap/Button';
@@ -7,14 +9,32 @@ import Dropdown from 'react-bootstrap/Dropdown';
 import "./detailItem.css"
 
 export const DetailItem = () => {
+    const [products, setProducts] = useState([]);
     const {id} = useParams();
-    const productSelect = productos.find(item => item.id===parseInt(id));
+
+    useEffect(() => {
+        const productsCollection = collection(db, "products");
+
+        getDocs(productsCollection)
+            .then((snapshot) => {
+                const productsData = snapshot.docs.map((doc) => ({
+                    ...doc.data(),
+                    id: doc.id,
+                }));
+                setProducts(productsData);
+            })
+    }, []);
+
+    
+    const productSelect = products.find(product => product.id=== id);
+    
     if(!productSelect){
         return <h2>Este producto no existe</h2>
     }
+    
     return (
         <div className="contenedorProductDetail d-flex justify-content-center align-items-center">
-        <Button as={Link} id="returnButton" to="/productos">Volver</Button>
+            <Button as={Link} id="returnButton" to="/productos">Volver</Button>
             <div className="productDetail w-75 justify-content-center align-items-center flex-row">
                 <div className="productDetailImg">
                     <Image src={productSelect.img} fluid/>

@@ -4,9 +4,9 @@ import "./button.css"
 export const Button = ({direccionUrl, texto}) => {
     return (
         <Link to={direccionUrl} style={{ textDecoration: 'none' }}>
-        <button class="Btn-Container">
-            <span class="text">{texto}</span>
-            <span class="icon-Container">
+        <button className="Btn-Container">
+            <span className="text">{texto}</span>
+            <span className="icon-Container">
                 <svg
                 width="16"
                 height="19"
