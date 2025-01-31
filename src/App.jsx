@@ -1,7 +1,7 @@
 import './App.css'
 import { useState } from 'react'
 import { BrowserRouter,Routes,Route } from 'react-router-dom'
-import { Home } from './components/home/home'
+import { Home } from './components/home/Home'
 import { ItemListContainer } from './components/itemListContainer/ItemListContainer'
 import { Contact } from './components/contact/Contact'
 import { Error } from './components/error/Error'
