@@ -44,7 +44,7 @@ export function ItemListContainer() {
 
     return (
         <div className="container w-100 containerList d-flex flex-column align-items-center">
-            <SearchBar products={products} onFilter={setFilteredProducts} />
+            <SearchBar products={filteredProducts} onFilter={setFilteredProducts} />
             <ItemList products={filteredProducts} />
         </div>
     );
