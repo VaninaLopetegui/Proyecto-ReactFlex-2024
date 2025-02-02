@@ -16,6 +16,11 @@ export const DetailItem = () => {
     const { carrito, setCarrito } = useContext(CartContext);
 
     useEffect(() => {
+        console.log("Carrito actualizado:", carrito);
+    }, [carrito]);
+    
+
+    useEffect(() => {
         const productsCollection = collection(db, "products");
 
         getDocs(productsCollection)
@@ -30,19 +35,29 @@ export const DetailItem = () => {
 
     const handleProductUnit = (event) =>{
         setCantidad(parseInt(event.target.id));
-        console.log(cantidad)
     }
 
     
-    const productSelect = products.find(product => product.id=== id);
+    const productSelect = products.find(product => product.id.toString()=== id.toString());
     
     if(!productSelect){
         return <h2>Este producto no existe</h2>
     }
     
     const agregarAlCarrito = () =>{
-        const productoAgregado = {...productSelect, cantidad}
-        console.log(productoAgregado)
+    if (!productSelect) {
+        console.log("Producto no encontrado");
+        return;
+    }
+    
+    const productoAgregado = { ...productSelect, cantidad };
+    if (!Array.isArray(carrito)) {
+        console.error("Error: carrito no es un array", carrito);
+        return;
+    }
+
+    setCarrito([...carrito, productoAgregado]);
+    console.log("Carrito actualizado:", carrito);
     }
     
     return (
@@ -63,7 +78,7 @@ export const DetailItem = () => {
                         <h5>Unidades: </h5>
                         <Dropdown className="mb-3">
                             <Dropdown.Toggle className="dropdown-basic">
-                                {cantidad}
+                                {cantidad === 1 ? cantidad + " unidad" : cantidad + " unidades"}
                             </Dropdown.Toggle>
                             <Dropdown.Menu>
                                 <Dropdown.Item onClick={handleProductUnit} id="1">1 unidad</Dropdown.Item>

@@ -41,7 +41,7 @@ export const SearchBar = ({ products , onFilter}) => {
 
     return (
         <>
-        <Form inline>
+        <Form className="d-inline">
             <Row>
                 <Col xs="auto">
                     <Form.Control
