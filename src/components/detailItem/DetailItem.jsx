@@ -50,14 +50,9 @@ export const DetailItem = () => {
         return;
     }
     
-    const productoAgregado = { ...productSelect, cantidad };
-    if (!Array.isArray(carrito)) {
-        console.error("Error: carrito no es un array", carrito);
-        return;
-    }
-
-    setCarrito([...carrito, productoAgregado]);
-    console.log("Carrito actualizado:", carrito);
+    let productoAgregado = { ...productSelect, cantidad };
+    let encontroProduct =  carrito.find(item => item.id === productSelect.id);
+    encontroProduct ? encontroProduct.cantidad += cantidad : setCarrito([...carrito, productoAgregado]) ;
     }
     
     return (

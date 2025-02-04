@@ -9,6 +9,7 @@ import { CartWidget } from './components/cartWidget/CartWidget'
 import { NavBar } from './components/navBar/NavBar'
 import { DetailItem } from './components/detailItem/DetailItem'
 import { CartContext } from './context/CartContext'
+import { DetailCartWidget } from './components/detailCardWidget/DetailCardWidget'
 
 function App() {
   const [carrito, setCarrito] = useState([]);
@@ -25,6 +26,7 @@ function App() {
               <Route path='productos/:id' element={<DetailItem/>}/>
               <Route path='category/:id' element={<ItemListContainer/>}/>
               <Route path='contacto' element={<Contact />}/>
+              <Route path='detalleCarrito' element={<DetailCartWidget />}/>
               <Route path='*' element={<Error />}/>
             </Route>
           </Routes>
