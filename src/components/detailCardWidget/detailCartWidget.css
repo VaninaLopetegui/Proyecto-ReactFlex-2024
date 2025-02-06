@@ -1,0 +1,36 @@
+.seccionProductosCarrito {
+    width: 100%;
+}
+
+.seccionProductoCarrito {
+    width: 60%;
+    height: 15%;
+    border: 1.5px solid rgba(107, 107, 107, 0.432);
+    border-radius: 2%;
+}
+
+.productoPrecioPorUnidad {
+    display: block;
+    font-size: 0.8rem;
+    color: rgb(165, 165, 165);
+}
+
+.seccionProductoCarrito img{
+    border: 1px solid rgba(102, 102, 102, 0.685);
+    width: 7vh;
+    height: 9vh;
+}
+
+.seccionProductoCarrito button{
+    border: none;
+}
+
+.seccionProductoCarrito svg{
+    background-color: white;
+    width: 3vh;
+    height: 5vh;
+}
+
+.seccionPagarCarrito {
+    width: 25%;
+}
