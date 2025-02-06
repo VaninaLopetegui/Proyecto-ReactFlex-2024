@@ -13,7 +13,7 @@ export const DetailItem = () => {
     const [products, setProducts] = useState([]);
     const [cantidad, setCantidad] = useState(1);
     const {id} = useParams();
-    const { carrito, setCarrito } = useContext(CartContext);
+    const { carrito, agregarAlCarrito } = useContext(CartContext);
 
     useEffect(() => {
         console.log("Carrito actualizado:", carrito);
@@ -37,22 +37,10 @@ export const DetailItem = () => {
         setCantidad(parseInt(event.target.id));
     }
 
-    
     const productSelect = products.find(product => product.id.toString()=== id.toString());
     
     if(!productSelect){
         return <h2>Este producto no existe</h2>
-    }
-    
-    const agregarAlCarrito = () =>{
-    if (!productSelect) {
-        console.log("Producto no encontrado");
-        return;
-    }
-    
-    let productoAgregado = { ...productSelect, cantidad };
-    let encontroProduct =  carrito.find(item => item.id === productSelect.id);
-    encontroProduct ? encontroProduct.cantidad += cantidad : setCarrito([...carrito, productoAgregado]) ;
     }
     
     return (
@@ -81,7 +69,7 @@ export const DetailItem = () => {
                                 <Dropdown.Item onClick={handleProductUnit} id="3">3 unidades</Dropdown.Item>
                             </Dropdown.Menu>
                         </Dropdown>
-                        <Button onClick={agregarAlCarrito}>Agregar al carrito</Button>
+                        <Button onClick={() => {agregarAlCarrito(productSelect, cantidad)}}>Agregar al carrito</Button>
                     </div>
                 </div>
             </div>

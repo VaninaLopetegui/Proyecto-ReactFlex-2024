@@ -1,5 +1,4 @@
 import './App.css'
-import { useState } from 'react'
 import { BrowserRouter,Routes,Route } from 'react-router-dom'
 import { Home } from './components/home/Home'
 import { ItemListContainer } from './components/itemListContainer/ItemListContainer'
@@ -8,15 +7,13 @@ import { Error } from './components/error/Error'
 import { CartWidget } from './components/cartWidget/CartWidget'
 import { NavBar } from './components/navBar/NavBar'
 import { DetailItem } from './components/detailItem/DetailItem'
-import { CartContext } from './context/CartContext'
+import { CartProvider } from './context/CartContext'
 import { DetailCartWidget } from './components/detailCardWidget/DetailCardWidget'
 
 function App() {
-  const [carrito, setCarrito] = useState([]);
-
   return (
     <>
-      <CartContext.Provider value={{carrito, setCarrito}}>
+      <CartProvider>
         <BrowserRouter>
           <Routes>
             <Route path='/' element={<NavBar cartWidget={CartWidget}/>}>
@@ -31,7 +28,7 @@ function App() {
             </Route>
           </Routes>
         </BrowserRouter>
-      </CartContext.Provider>
+      </CartProvider>
     </>
   )
 }
